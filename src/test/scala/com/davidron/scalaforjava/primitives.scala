@@ -27,9 +27,24 @@ class FunctionsAreObjectsTest{
         assertEquals( thisFunctionReturnsAFunction( )( "Ho!" ) , "This is a string: Ho!" )
 }
 
-class TraitsAndPatternMatchingTest {
+class ClassesTest {
+    class TestClass(val publicField:String){
+        def this() = this("auxiliary constructor")
+    }
+    
+    @Test
+    def testDefaultConstructor() =  
+        assertEquals( new TestClass("constructor").publicField , "constructor" )
+    
+    @Test
+    def testAuxiliaryConstructor() =  
+        assertEquals( new TestClass().publicField , "auxiliary constructor" )
+}
+
+class CaseClassesAndPatternMatchingTest {
     abstract class Notification
 
+    //Case classes are immutable. (variables public final)
     case class Email(sender: String, title: String, body: String) extends Notification
 
     case class SMS(caller: String, message: String) extends Notification
@@ -48,8 +63,12 @@ class TraitsAndPatternMatchingTest {
     }
     
     @Test
+    def testCaseClassFieldsArePublicFinal() = 
+        assertEquals( SMS("David", "Hello").caller , "David")
+    
+    @Test
     def testPatternMatching() =  
-        assertEquals( getNotification(SMS(caller="David", message="Hello")) , "You got an SMS from David! Message: Hello" )
+        assertEquals( getNotification(SMS(message="Hello", caller="David")) , "You got an SMS from David! Message: Hello" )
     
 }
 
