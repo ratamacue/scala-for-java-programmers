@@ -12,7 +12,8 @@ class NumbersAreObjectsTest{
     val theyAreActuallyObjects = (1).+(((2).*(3))./(x))
     
     @Test
-    def testNumbersAreObject() =  assertEquals( looksLikeJava , theyAreActuallyObjects )
+    def testNumbersAreObject() =  
+        assertEquals( looksLikeJava , theyAreActuallyObjects )
 }
 
 class FunctionsAreObjectTest{
@@ -22,6 +23,7 @@ class FunctionsAreObjectTest{
     }
     
     @Test
-    def testNumbersAreObject() =  assertEquals( thisFunctionReturnsAFunction( )( "Ho!" ) , "This is a string: Ho!" )
+    def testNumbersAreObject() =  
+        assertEquals( thisFunctionReturnsAFunction( )( "Ho!" ) , "This is a string: Ho!" )
 }
 
