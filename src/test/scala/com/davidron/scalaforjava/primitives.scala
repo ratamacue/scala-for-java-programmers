@@ -28,8 +28,9 @@ class FunctionsAreObjectsTest{
 }
 
 class ClassesTest {
-    class TestClass(val publicField:String){
+    class TestClass(val publicField:String, privateField:String="defaultValue"){
         def this() = this("auxiliary constructor")
+        def getPrivateField():String = privateField
     }
     
     @Test
@@ -39,6 +40,10 @@ class ClassesTest {
     @Test
     def testAuxiliaryConstructor() =  
         assertEquals( new TestClass().publicField , "auxiliary constructor" )
+        
+    @Test
+    def testPrivateField() =  
+        assertEquals( new TestClass().getPrivateField , "defaultValue" )
 }
 
 class CaseClassesAndPatternMatchingTest {
