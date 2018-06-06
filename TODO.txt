@@ -1,0 +1,8 @@
+(1) val/def (we won't use var or lazy), equal sign used in defs, last line of a block is the return statement
+(2) type follows identifier instead of coming before it (i will put a lot of annotations,so no need to talk about inference)
+(3) case calsses, immutable by default, favor all-arg constructors w/ kwargs instead of builders.
+(4) objects and companion objects (e.g., no such thing as static methods, objects are namespaces for global/non-instanced defs/vals, companion object is just an object that happens to have the same name as some class)
+(5) generics (not used so much in java, used heavily in scala, and not just generic classes, but generics in defs as well)
+(6) eithers, their Left and Right constructors, and the meaning of their map, flatMap, and fold methods (pretty much every method that can fail for expected reasons will return an Either[HttpResponse, Foo] instead of a naked Foo that might implicitly throw. this lets us handle errors right at the point where we detect them, we reserve throwing for things we either can't anticipate or can't reasonably handle)
+(7) lambda expressions (basically same as java, so easy)
+(8) i don't think we'll need pattern matching, but keep it in mind, b/c it has a way of creeping in
