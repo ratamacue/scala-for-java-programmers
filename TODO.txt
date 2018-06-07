@@ -2,12 +2,12 @@ Done: (1) val/def (we won't use var or lazy), equal sign used in defs, last line
 Done: (2) type follows identifier instead of coming before it (i will put a lot of annotations,so no need to talk about inference)
 Done: (3) case calsses, immutable by default, favor all-arg constructors w/ kwargs instead of builders.
 Done: (4) objects and companion objects (e.g., no such thing as static methods, objects are namespaces for global/non-instanced defs/vals, companion object is just an object that happens to have the same name as some class)
-(5) generics (not used so much in java, used heavily in scala, and not just generic classes, but generics in defs as well)
+Done: (5) generics (not used so much in java, used heavily in scala, and not just generic classes, but generics in defs as well)
 Nope: (6) eithers, their Left and Right constructors, and the meaning of their map, flatMap, and fold methods (pretty much every method that can fail for expected reasons will return an Either[HttpResponse, Foo] instead of a naked Foo that might implicitly throw. this lets us handle errors right at the point where we detect them, we reserve throwing for things we either can't anticipate or can't reasonably handle)
 Done: (7) lambda expressions (basically same as java, so easy)
 Done: (8) i don't think we'll need pattern matching, but keep it in mind, b/c it has a way of creeping in\
 
 
-Option instead of optional
+DONE: Option instead of optional
 List is a concrete implementation of Seq (list interface) Immutable  (similar to lists in lisp, cons, nil, etc.)
 
