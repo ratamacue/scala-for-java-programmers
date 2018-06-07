@@ -151,7 +151,6 @@ class ListsAreImmutableTest{
         assertEquals(List(1,2,3) , List(1,2):::List(3) )
         
     // Have a look at List https://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html
-    // And its parent Seq 
 
 }
 
