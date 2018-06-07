@@ -138,6 +138,7 @@ class ListsAreImmutableTest{
     // Any operator that end with a ":" is right-associative infix.
     // This means, operators that end with a ":" are functions on the RIGHT object
     // This is the opposite of operators such as "." which are applied to the LEFT object
+    // As in lisp, Nil is an empty list.
     @Test def testLispLikeLists() =  
         assertEquals(List(1,2,3) , 1::2::3::Nil )
         
