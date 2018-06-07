@@ -5,9 +5,9 @@ Done: (4) objects and companion objects (e.g., no such thing as static methods, 
 Done: (5) generics (not used so much in java, used heavily in scala, and not just generic classes, but generics in defs as well)
 Nope: (6) eithers, their Left and Right constructors, and the meaning of their map, flatMap, and fold methods (pretty much every method that can fail for expected reasons will return an Either[HttpResponse, Foo] instead of a naked Foo that might implicitly throw. this lets us handle errors right at the point where we detect them, we reserve throwing for things we either can't anticipate or can't reasonably handle)
 Done: (7) lambda expressions (basically same as java, so easy)
-Done: (8) i don't think we'll need pattern matching, but keep it in mind, b/c it has a way of creeping in\
+Done: (8) i don't think we'll need pattern matching, but keep it in mind, b/c it has a way of creeping in
 
 
 DONE: Option instead of optional
-List is a concrete implementation of Seq (list interface) Immutable  (similar to lists in lisp, cons, nil, etc.)
+DONE: List is a concrete implementation of Seq (list interface) Immutable  (similar to lists in lisp, cons, nil, etc.)
 
