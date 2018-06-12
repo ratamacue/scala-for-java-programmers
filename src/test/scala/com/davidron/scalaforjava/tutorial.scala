@@ -1,8 +1,15 @@
+// Package declaration is similar to Java.  No ; needed.
 package com.davidron.scalaforjava
 
+// The "_" is a wildcard character
 import org.junit._
+
+// Since we imported org.junit._, Assert is available.
+// Notice that static functions (Assert.assertEquals) are imported just like classes.
 import Assert._
 
+// Classes need not match their file name.
+// This is considered bad form.
 class NumbersAreObjectsTest{
     
     // The type is inferred to be a number
@@ -19,6 +26,8 @@ class NumbersAreObjectsTest{
         assertEquals( looksLikeJava , theyAreActuallyObjects )
 }
 
+// Multiple classes may exist in a file.
+// This is considered bad form.
 class StringsTest {
     val multiLine = """
         |This is a multi-line String.
